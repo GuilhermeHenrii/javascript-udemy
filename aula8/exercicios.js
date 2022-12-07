@@ -1,6 +1,5 @@
 function calculoImc(altura, peso){
     const IMC = peso/(altura*altura);
-    console.log(IMC);
     return IMC;
 }
 let calculo = calculoImc(1.72, 69);
