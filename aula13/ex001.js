@@ -1,8 +1,8 @@
-let frase = 'O rato roeu a roupa do rei de roma...'
+let frase = 'O rato roeu a roupa do rei de roma...' //Strings são indexaveis
 //Manipulando strings
 console.log(frase[0]);
 console.log(frase.replace('O', 'A')); //sem expressão regular
-console.log(frase.split(' ', 3));
+console.log(frase.split('r', 3));
 console.log(frase.slice(-7, -3));
 
 //indexOf

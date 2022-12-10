@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios aula 13</title>
+</head>
+
+<body>
+    <h1>Exercício</h1>
+    <script>
+        const nome = prompt('Digite seu nome completo:');
+
+        let quantidadePalavras = nome.split(' ');
+        //[guilherme, henrique, da, silva, lopes]
+        let quantidadeLetras = 0;
+        for (let i in quantidadePalavras) {
+            quantidadeLetras += quantidadePalavras[i].length;
+
+        }
+        let segundaLetra = nome[1];
+        let ultimoNome = quantidadePalavras.reverse();
+        quantidadePalavras = nome.split(' ');
+        ultimoNome = ultimoNome[0];
+        let ultimaLetra = ultimoNome.slice(-3);
+        let nomeMaiusculo = nome.toLocaleUpperCase();
+        let nomeMinusculo = nome.toLocaleLowerCase();
+       
+
+        let indicePrimeiraLetraA = nome.toUpperCase();
+        indicePrimeiraLetraA = indicePrimeiraLetraA.indexOf('A');
+        let indiceUltimaLetraA = nome.toUpperCase();
+        indiceUltimaLetraA = indiceUltimaLetraA.lastIndexOf('A');
+
+
+        window.document.body.innerHTML += `O seu nome é: 
+        ${nome} <br>`;
+        window.document.body.innerHTML += `Seu nome tem: 
+        ${quantidadeLetras} letras, sem contar os  
+        espaços em branco. <br>`
+        window.document.body.innerHTML += `A segunda  
+        letra  do seu nome é: ${segundaLetra} <br>`;
+        window.document.body.innerHTML += `Qual o primeiro 
+        índice da letra 'a' no seu nome? ${indicePrimeiraLetraA} 
+        <br>`;
+        window.document.body.innerHTML += `Qual o último 
+        índice da letra 'a' no seu nome? ${indiceUltimaLetraA} 
+        <br>`;
+        window.document.body.innerHTML += `As últimas 3 
+        letras do seu nome são:${ultimaLetra} <br>`;
+        window.document.body.innerHTML += `As palavras do 
+        seu nome são: ${quantidadePalavras} <br>`;
+        window.document.body.innerHTML += `Seu nome com 
+        letras maiúsculas:${nomeMaiusculo} <br>`;
+        window.document.body.innerHTML += `Seu nome com 
+        letras minúsculas:${nomeMinusculo}<br>`;
+    </script>
+    </script>
+</body>
+
+</html>
