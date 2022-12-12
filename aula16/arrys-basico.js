@@ -29,6 +29,8 @@ console.log(nomes2[3]);
 console.log(nomes2.length - 1);
 nomes2[nomes2.length] = 'guigui'; //adicionando um elemento ao final do array
 console.log(nomes2);
+nomes2[0] = 'joana';//alterando o valor do array no indice 0
+console.log(nomes2)
 
 /*********************************************************************/
 //usando o slice
