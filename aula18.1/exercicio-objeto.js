@@ -3,10 +3,20 @@ const pessoa = {
     sobrenome:'henrique',
     idade:10,
 
-    percorreObjeto(){
-        for (i in this){
-            console.log(this[i]);
-        }
+    fala(){
+        console.log(`meu nome é ${this.nome} minha idade é ${this.idade} meu sobrenome é ${this.sobrenome}`);
+    },
+
+    incrementIdade(){
+       this.idade++; 
     }
-}
-pessoa.percorreObjeto();
+};
+pessoa.incrementIdade();
+pessoa.fala();
+pessoa.incrementIdade();
+pessoa.incrementIdade();
+pessoa.incrementIdade();
+pessoa.incrementIdade();
+pessoa.incrementIdade();
+pessoa.incrementIdade();
+pessoa.fala();
