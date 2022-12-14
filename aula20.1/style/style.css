@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cadetblue;
+}
+
+main{
+    background-color: lightblue;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow:0px 0px 8px 1px rgba(0, 0, 0, 0.411);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main form div.info{
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main form div.info h1{
+    text-align: center;
+    padding: 10px;
+}
+
+
+input.nome{
+   height: 25px;
+   border-radius: 10px;
+   border: none;
+   text-align: center;
+}
+
+input.email{
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+main div.tech{
+    padding: 10px;
+    text-align: center;
+}
+
+main div.tech h2{
+    margin-bottom: 20px;
+}
+
+button{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+div.resultado{
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 20px
+}
