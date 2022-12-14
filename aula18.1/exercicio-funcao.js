@@ -1,8 +1,6 @@
-const array = ['eu', 'sou', 'o', 'milior'];
-console.log(array);
-array[0] = 'millior';
-array[1] = 'o';
-array[2] = 'sou';
-array[3] = 'eu';
-console.log(array);
+function calculaImc(altura, peso){
+    const calculo = peso/(altura*altura);
+    return calculo;
+}
 
+console.log(calculaImc(1.72, 68));
