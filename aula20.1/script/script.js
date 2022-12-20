@@ -1,6 +1,6 @@
 function meuEscopo(){
     const form = document.querySelector('.form');
-    const resp = document.querySelector('.resultado')
+    const resp = document.querySelector('.resultado');
     const pessoas = [];
 
     function recebeEventoForm(evento){
@@ -8,9 +8,9 @@ function meuEscopo(){
 
         const nome = form.querySelector('.nome');
         const email = form.querySelector('.email');
-        const js = form.querySelector('.js')
-        const css = form.querySelector('.css')
-        const html = form.querySelector('.html')
+        const js = form.querySelector('.js');
+        const css = form.querySelector('.css');
+        const html = form.querySelector('.html');
 
         pessoas.push({
             nome:nome.value,
@@ -22,7 +22,7 @@ function meuEscopo(){
         resp.innerHTML = `Seu formulário foi enviado ${nome.value}!`;
     }
 
-    form.addEventListener('submit', recebeEventoForm)
+    form.addEventListener('submit', recebeEventoForm);
 }
 
 meuEscopo();
