@@ -67,15 +67,24 @@ form button:hover {
   background: var(--primary-color-darker);
 }
 
-.paragrafo-resultado, .paragrafo-bad{
-  background-color: rgb(82, 250, 158);
-  padding: 10px 20px;
-  text-align: center;
-  box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.199);;
+/************************************************************************************************************************/
+div.list-container{
+    display: flex;
+    justify-content: space-between;
 }
 
-.paragrafo-bad{
+ul{
+    list-style: none;
+    padding-left: 0px;
+    align-self: center;
+}
+
+ul.list2{
+    margin-right: 70px;
+}
+
+div#resposta{
   background-color: red;
+  width: 100%;
+  border-radius: 5px;
 }
-
-
