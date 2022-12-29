@@ -1,84 +1,85 @@
-function formataData(){
+function formataData(data){
+    let diaSemana = data.getDay();
+    let diaMes = data.getDate();
+    let mes = data.getMonth();
+    let ano = data.getFullYear();
+    let hora = data.getHours();
+    let minuto = data.getMinutes();
+    let segundo = data.getSeconds();
+    //return `${dia}/${mes}/${ano} ${hora}:${minuto}:${segundo}`;
 
-}
-
-function getData(){
-    const data = new Date(); 
-    const dia = data.getDay();
-    const mes = data.getMonth();
-    let txtDia = '';
-    let txtMes = '';
-
-    switch(dia){
+    switch(diaSemana){
         case 0:
-            txtDia = 'Domingo';
+            diaSemana = 'domingo';
             break;
         case 1:
-            txt = 'Segunda-feira';
+            diaSemana = 'segunda-feira';
             break;
         case 2:
-            txtDia = 'Terça-feira';
+            diaSemana = 'terça-feira';
             break;
         case 3:
-            txtDia = 'Quarta-feira';
+            diaSemana = 'quarta-feira';
             break;
         case 4:
-            txtDia = 'Quinta-feira';
+            diaSemana = 'quinta-feira';
             break;
         case 5:
-            txtDia = 'Sexta-feira';
+            diaSemana = 'sexta-feira';
             break;
         case 6:
-            txtDia = 'Sábado';Mes
+            diaSemana = 'sábado';
             break;
         default:
-            txtDia = 'Dia não encontrado';
+            diaSemana = 'dia não encontrado';
+            break;
     }
 
     switch(mes){
         case 0:
-            txtMes = 'Janeiro';
+            mes = 'janeiro';
             break;
         case 1:
-            txtMes = 'Fevereiro';
+            mes = 'fevereiro';
             break;
         case 2:
-            txtMes = 'Março';
+            mes = 'março';
             break;
         case 3:
-            txtMes = 'Abril';
+            mes = 'abril';
             break;
         case 4:
-            txtMes = 'Maio';
+            mes = 'maio';
             break;
         case 5:
-            txtMes = 'Junho';
+            mes = 'junho';
             break;
         case 6:
-            txtMes = 'Julho';
+            mes = 'julho';
             break;
         case 7:
-            txtMes = 'Agosto';
+            mes = 'agosto';
             break;
         case 8:
-            txtMes = 'Setembro';
+            mes = 'setembro';
             break;
         case 9:
-            txtMes = 'Outubro';
+            mes = 'outubro';
             break;
         case 10:
-            txtMes = 'Novembro';
+            mes = 'novembro';
             break;
         case 11:
-            txtMes = 'Dezembro';
+            mes = 'dezembro';
             break;
         default:
-            txtMes = 'Mês não encontrato';
+            mes = 'mês não encontrado';
+            break;
     }
-    return `${txtDia} ${txtMes}`;
+    return `${diaSemana}, ${diaMes} de ${mes} de ${ano} ${hora}:${minuto}:${segundo}`;
 }
 
-
 const txtHr = document.querySelector('#txtHr');
-const data = getData();
-txtHr.innerHTML = `${data}`;
+const data = new Date();
+const dataBr = formataData(data);
+txtHr.innerHTML = `${dataBr}`;
