@@ -1,11 +1,30 @@
+//Forma muito mais simples de fazer esse exercício
+const h1 = document.querySelector('.container h1');
+const data = new Date();
+const opcoes = {
+    dateStyle: 'full',
+    timeStyle: 'short'
+};
+
+h1.innerHTML = data.toLocaleString('pt-BR', opcoes);
+
+
+
+/*
+function zeroAEsquerda(num){
+    const zero =  num >= 0 && num < 10 ? `0${num}` : num;
+    return zero;
+}
+
+
 function formataData(data){
     let diaSemana = data.getDay();
-    let diaMes = data.getDate();
+    let diaMes = zeroAEsquerda(data.getDate());
     let mes = data.getMonth();
     let ano = data.getFullYear();
-    let hora = data.getHours();
-    let minuto = data.getMinutes();
-    let segundo = data.getSeconds();
+    let hora = zeroAEsquerda(data.getHours());
+    let minuto = zeroAEsquerda(data.getMinutes());
+    let segundo = zeroAEsquerda(data.getSeconds());
     //return `${dia}/${mes}/${ano} ${hora}:${minuto}:${segundo}`;
 
     switch(diaSemana){
@@ -83,3 +102,4 @@ const txtHr = document.querySelector('#txtHr');
 const data = new Date();
 const dataBr = formataData(data);
 txtHr.innerHTML = `${dataBr}`;
+*/
