@@ -30,7 +30,7 @@ function getDiaSemana(diaSemana){
     return diaSemanaTexto;//substituindo todos os breaks por return, não teria necessidade esse return aqui.
 }
 
-const data = new Date('1999-10-25');
+const data = new Date('1999-10-27');
 const diaSemana = data.getDay();
 const diaSemanaTexto = getDiaSemana(diaSemana);
 console.log(diaSemana, diaSemanaTexto);
