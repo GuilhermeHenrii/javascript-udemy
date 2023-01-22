@@ -1,7 +1,7 @@
 const paragrafos = document.querySelector('.paragrafos');
 const ps = paragrafos.querySelectorAll('p');
 const estilosBody = getComputedStyle(document.body);
-const backgroundColorBody = estilosBody.backgroundColor
+const backgroundColorBody = estilosBody.backgroundColor;
 let corDaLetra = estilosBody.color;
 corDaLetra = 'white';
 
