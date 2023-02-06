@@ -73,11 +73,11 @@ div.list-container{
     justify-content: space-between;
 }
 
-ul{
-    /* list-style: none;
+/* ul{
+    list-style: none;
     padding-left: 0px;
-    align-self: center; */
-}
+    align-self: center;
+} */
 
 ul.list2{
     margin-right: 70px;
@@ -88,5 +88,3 @@ div#resposta{
   width: 100%;
   border-radius: 5px;
 }
-
-

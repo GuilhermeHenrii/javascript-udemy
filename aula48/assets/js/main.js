@@ -10,7 +10,7 @@ function createLi(){
 inputTxt.addEventListener('keypress', function(e){
     if(e.keyCode === 13){
         if(!inputTxt.value) return;
-        createTask();
+        createTask(inputTxt.value);
     };
 });
 
@@ -23,14 +23,14 @@ function createButtonDelete(li){
     li.innerText += ' ';
     const buttonDelete = document.createElement('button');
     buttonDelete.innerText = 'Apagar';
-    li.appendChild(buttonDelete);
     buttonDelete.setAttribute('class', 'delete');
-    buttonDelete.setAttribute('title', 'Apagar esta tarefa');
+    buttonDelete.setAttribute('title', 'Apagar esta tarefa')
+    li.appendChild(buttonDelete);
 };
 
-function createTask(inputText){
+function createTask(inputTxt){
     const li = createLi();
-    li.innerText = inputTxt.value;
+    li.innerText = inputTxt;
     list.appendChild(li);
     cleanInput();
     createButtonDelete(li);
