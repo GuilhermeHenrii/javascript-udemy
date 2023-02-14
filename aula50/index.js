@@ -1,6 +1,6 @@
 //arguments variavel especial (NÃO FUNCIONA COM ARROW FUNCTION);
 function funcao(a, b, c = 1){//adicionando um valor padrão para o parametro
-    a = a || 2;// =curto-circuito, atribuindio um valor caso o parametro seja falsy
+    a = a || 2;// = curto-circuito, atribuindio um valor caso o parametro seja falsy
     let total = 0;
     for(let argumento of arguments){
         total += argumento;
