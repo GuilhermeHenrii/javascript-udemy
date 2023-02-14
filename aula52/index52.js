@@ -5,4 +5,8 @@ function falaNome(){//essa função, procura a variavel 'nome' no seu escopo lex
     console.log(nome);
 }
 
-function usaFalaNoe
+function usaFalaNome(){
+    const nome = 'Henrique';
+    falaNome();
+}
+usaFalaNome();
