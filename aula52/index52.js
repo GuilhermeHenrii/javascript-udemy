@@ -1,9 +1,8 @@
 //escopo léxico(escopo dos "pais")
+const nome = "Luiz";
 
-function falaNome(){
-    console.log("Pera");
+function falaNome(){//essa função, procura a variavel 'nome' no seu escopo lexico
+    console.log(nome);
 }
-{
-    console.log(falaNome);
-    const falaNome = "limao!"
-}
+
+function usaFalaNoe
