@@ -44,6 +44,11 @@ body {
   justify-content: end;
 }
 
+.div-num{
+  display: flex;
+  justify-content: ;
+}
+
 .btn{
   width: 80px;
   height: 70px;
