@@ -23,7 +23,7 @@ body {
 }
 
 
-.container {
+main.container {
   max-width: 640px;
   margin: 50px auto;
   background: #fff;
@@ -31,26 +31,26 @@ body {
   border-radius: 20px;
 }
 
-.div-calc{
+section.calc {
   background-color: red;
-  height: 500px;
   width: 400px;
+  height: 450px;
   display: flex;
 }
 
-.div-btn{
-  display: flex;
-  flex-direction: column;
+.operations-btn > ul{
+  list-style: none;
+}
+
+.operations-btn > button{
+  width: 60px;
+  height: 60px;
   justify-content: end;
 }
 
-.div-num{
-  display: flex;
-  justify-content: ;
+.numbers-btn > button{
+  width: 60px;
+  height: 60px;
+  justify-content: start;
 }
 
-.btn{
-  width: 80px;
-  height: 70px;
-  margin: 10px;
-}
