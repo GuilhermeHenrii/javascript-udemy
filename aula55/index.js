@@ -13,6 +13,7 @@ console.log(nome);
 
 const meuNome = (function(){
     const nome = 'guilherme henrique';
+    //return nome;
 })();
 
 function mostraNome(){

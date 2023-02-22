@@ -4,7 +4,6 @@ function watch(){
         return data.toLocaleTimeString('pt-BR', {
             hour12: false,
             timeZone: 'GMT'//time zone do br
-    
         });
     }
     
