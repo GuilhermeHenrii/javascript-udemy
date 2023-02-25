@@ -1,11 +1,14 @@
 //Factory functions
+
 function criaPessoa(nome, sobrenome){
-    nome,
-    sobrenome,
-    fala(assunto){
-        return `${this.nome} está ${assunto}`;
+    return{
+        nome,
+        sobrenome,
+        fala(assunto){
+            return `${nome} esta falando sobre ${assunto}`;
+        }
     }
 }
 
-const p1 = criaPessoa('Guilherme', 'Henrique');
-console.log(p1.fala('falando sobre js'));
+const pessoa1 = criaPessoa('Guilherme', 'Henrique');
+console.log(pessoa1.fala())
