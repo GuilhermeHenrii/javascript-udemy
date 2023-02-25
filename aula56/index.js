@@ -1,11 +1,11 @@
 //Factory functions
-
-const obj = {
-    nome: 'guilherme',
-    sobrenome: 'henrique',
-    falar: function(assunto){
-        return `${nome} está ${assunto}`;
-    }
+function criaPessoa(nome, sobrenome){
+    nome,
+    sobrenome,
+    function fala(assunto){
+        return `${this.nome} está ${assunto}`;
+    },
 }
 
-const p1 = 
+const p1 = criaPessoa('Guilherme', 'Henrique');
+console.log(p1.fala('falando sobre js'));
