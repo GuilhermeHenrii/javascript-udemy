@@ -5,10 +5,17 @@ function criaPessoa(nome, sobrenome){
         nome,
         sobrenome,
         fala(assunto){
-            return `${nome} esta falando sobre ${assunto}`;
+            return `${this.nome} esta falando sobre ${assunto}`;
+        },
+        imc(peso, altura){
+            const calcImc = peso/(altura*altura);
+            return calcImc.;
         }
     }
 }
 
 const pessoa1 = criaPessoa('Guilherme', 'Henrique');
-console.log(pessoa1.fala())
+const pessoa2 = criaPessoa('Emily', 'Silva');
+
+console.log(pessoa1.fala('programação'));
+console.log(pessoa1.imc(60, 1.70));
