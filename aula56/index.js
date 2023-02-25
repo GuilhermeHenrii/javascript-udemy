@@ -2,9 +2,9 @@
 function criaPessoa(nome, sobrenome){
     nome,
     sobrenome,
-    function fala(assunto){
+    fala(assunto){
         return `${this.nome} está ${assunto}`;
-    },
+    }
 }
 
 const p1 = criaPessoa('Guilherme', 'Henrique');
