@@ -49,11 +49,3 @@ console.log(pessoa1.nome);
 
 console.log(pessoa1.imc);
 console.log(pessoa2.imc);
-
-const obj = {
-    nome2: 'guilherme',
-    sobrenome2: 'henrique'
-};
-
-const matriz = [];
-console.log(array[3]);
