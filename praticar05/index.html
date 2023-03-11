@@ -4,44 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Quem é você?</title>
 </head>
 <body>
-    <h1>Guilherme Henrique</h1>
-    <div class="calculadora">
-        <h1>Calculadora</h1>
-        <p></p>
-        <table>
-            <tr>
-                <td><button class="botao">C</button></td>
-                <td><button class="botao"><</button></td>
-                <td><button class="botao">/</button></td>
-                <td><button class="botao">X</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao">7</button></td>
-                <td><button class="botao">8</button></td>
-                <td><button class="botao">9</button></td>
-                <td><button class="botao">-</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao">4</button></td>
-                <td><button class="botao">5</button></td>
-                <td><button class="botao">6</button></td>
-                <td><button class="botao">+</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao">1</button></td>
-                <td><button class="botao">2</button></td>
-                <td><button class="botao">3</button></td>
-                <td rowspan="2"><button class="botao">=</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao">0</button></td>
-                <td colspan="2"><button class="botao">.</button></td>
-            </tr>
-        </table>
-    </div>
+    <main class="main">
+        <h1>QUIZ DA VIDA</h1>
+        <h3>Qual seu gênero?</h3>
+        <label for="genM">Masculino</label>
+        <input type="radio" name="gen" id="genM">
+        <br>
+        <label for="genF">Feminino</label>
+        <input type="radio" name="gen" id="genF">
+
+        <h3>Qual a sua data de nascimento?</h3>
+        <input type="date" name="date" id="dateId">
+
+        <div id="res"></div>
+
+        <button class="btn">Enviar</button>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
