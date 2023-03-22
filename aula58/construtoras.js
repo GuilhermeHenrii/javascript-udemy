@@ -4,7 +4,7 @@
 
 function Pessoa(nome, sobrenome){
     //por ser uma função construtora o jv entende que
-    //o corpo da função é um onjeto
+    //o corpo da função é um objeto
 
     //atributos e metodos privados
     const idPessoa = 1010;
