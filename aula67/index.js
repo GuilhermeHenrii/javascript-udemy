@@ -4,7 +4,7 @@
 //Podemos fazer essas tres funcoes usando apenas o REDUCE
 /*****************************************************************************************/
 
-//Reduce, mais usado para reduzir o array
+//Reduce é mais usado para reduzir o array
 //Com reduce podemos executar o trabalho do filter() e do map, mesmo não sendo recomendado
 //Tbm retorna uma função callback
 //Possui um parametro a mais: acumulador

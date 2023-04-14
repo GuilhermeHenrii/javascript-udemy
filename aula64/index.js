@@ -15,5 +15,5 @@ console.log(typeof array4);
 
 
 //Usando o spread (...)
-const array5 = [...array1, ...array2, ...[10, 'gui'], 'luiz'];
+const array5 = [...array1,...array2, ...[10, 'gui'], 'luiz'];
 console.log(array5);
