@@ -11,7 +11,7 @@ function Produto(nome, preco, estoque){
 
     Object.defineProperties(this, {
         nome:{
-            enumerable: false,
+            enumerable: true,
             value: nome,
             writable: false,
             configurable: false
@@ -20,7 +20,7 @@ function Produto(nome, preco, estoque){
         preco:{
             value: function(){
                 console.log('Método privado chamado!');
-                return 20 + (10/100);
+                return preco + (10/100);
             },
 
             enumerable: false,
