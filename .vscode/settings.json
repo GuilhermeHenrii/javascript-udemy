@@ -1,3 +1,4 @@
 {
-    "editor.wrappingIndent": "indent"
+    "editor.wrappingIndent": "indent",
+    "liveServer.settings.port": 5501
 }

@@ -1,4 +1,4 @@
-//Outros objetos e funcionalidades com objetos
+//Outros metodos e funcionalidades com objetos
 //Copiando objetos com ... ou assingn
 const produto = {nome:'Tijela', preco: 1.8};
 const produto2 = {...produto, tamanho:'pequeno'};
@@ -10,7 +10,7 @@ produto.cor = 'rosa';
 console.log(produto, produto2, produto3, produto4);
 
 
-//Usando o keys para ver os valores do objeto
+//Usando o keys para ver as chaves do objeto
 const chaves = Object.keys(produto);
 console.log(chaves);
 
