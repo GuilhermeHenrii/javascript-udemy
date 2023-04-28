@@ -35,7 +35,7 @@ const pessoas = [
 const velho = pessoas.reduce(function(acumulador, valor, indice, array){
     if(acumulador.idade > valor.idade){
         console.log(acumulador);
-        return acumulador;
+        return acumulador;  
     }else{
         console.log(acumulador);
         return valor;
