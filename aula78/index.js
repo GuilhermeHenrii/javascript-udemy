@@ -32,7 +32,7 @@ ContaCorrente.prototype.constructor = ContaCorrente;
 
 ContaCorrente.prototype.sacar = function(valor) {//Método se comportando de forma diferente na classe filha de uma superclasse, caracterizando o polimorfismo
     if(this.saldo < valor){
-        console.log(`Seu saldo é de: R$${this.saldo},00. Tente sacar um valor igual ou abaixo do seu saldo.`)
+        console.log(`Seu saldo é de: R$${this.saldo},00. Tente sacar um valor igual ou abaixo do seu saldo.`);
         return;
     }else if(valor > (this.limiteDiario - this.limiteAcumulado)){
         console.log(`Você atingiu o limite diário de saques.`);
