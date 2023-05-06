@@ -1,3 +1,4 @@
+//Estrutura de dados map
 const mapa = new Map();
 
 mapa.set('Cachorro', 5);
