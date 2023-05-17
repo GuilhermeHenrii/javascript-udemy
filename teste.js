@@ -1,6 +1,13 @@
-function sum(a, b){
-  const x = a + b;
-  return `X = ${x}`;
+const data = new Date();
+
+class Pessoa {
+  constructor(nome, sobrenome) {
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+  }
 }
 
-console.log(5, 10);
+const pessoa1 = new Pessoa('Gui', 'Henrique');
+console.log(pessoa1);
+
+console.log(data instanceof Pessoa);
