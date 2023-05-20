@@ -81,7 +81,7 @@ document.addEventListener('click', function (event) {
     const cpf = inputs[2].value;
     const user = inputs[3].value;
     const passWord = inputs[4].value;
-    const repetPassword = inputs[5].value;
+    const repetPassword = inputs[5].value; 
     const el = event.target;
     if (el.classList.contains('btnSend')) {
         const userInformation = new ValidRegistrationForm(name, surName, cpf, user, passWord, repetPassword);
