@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Formulário de cadastro</h1>
+        <ul>
+            <li>Nehum campo pode estar vazio</li>
+            <li>Usuário só poderá conter letras e/ou números</li>
+            <li>Usúario deverá ter entre 3 e 12 caracateres</li>
+            <li>Senha precisa ter entre 6 e 12 caracteres</li>
+        </ul>
+
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name">
+    
+            <label for="surname">Sobrenome:</label>
+            <input type="text" name="surname" id="surname">
+    
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf">
+    
+            <label for="user">Usuário:</label>
+            <input type="text" name="user" id="user">
+    
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password">
+    
+            <label for="repet-password">Repetir senha:</label>
+            <input type="password" name="repet-password" id="repet-password">
+    
+            <input type="button" value="Enviar" class="btnSend">
+        </form>
+    </section>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
