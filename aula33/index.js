@@ -1,4 +1,4 @@
-//Atribuição via desestruturação om objetos
+//Atribuição via desestruturação com objetos
 const pessoa = {
     nome: 'Gui',
     sobrenome: 'henrique',
