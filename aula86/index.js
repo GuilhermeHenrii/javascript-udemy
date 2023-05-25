@@ -24,7 +24,7 @@ esperaAi('Frase 1', rand(1, 5), function () {
 
 // Usando Promises esse comportamento é controlado de maneira mais fácil e intuitiva:
 function esperaAiPromisse(msg2, temp2) {
-    return new Promise((resolve, reject) => {//new Promise cria uma promisse que recebe dois parametros, que por convensao ficou conhecido com resolve e reject
+    return new Promise((resolve, reject) => {//new Promise cria uma promise que recebe dois parametros, que por convensao ficou conhecido com resolve e reject
         // sempre que quiser resolver algo em uma promessa usa o resolve (then ());
         // sempre que eu quiser rejeitar algo em uma promisse eu uso o reject (cath())
         if (typeof msg2 !== 'string') reject(new Error);
