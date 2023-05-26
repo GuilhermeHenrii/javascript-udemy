@@ -25,7 +25,7 @@ class ValidaCpf{
         return novoCpf === this.cpfLimpo;
     }
 
-    static criaDigito(cpfCortado){//Observando que o método criDigito não usa o this, ou seja, não usa nada que vem na instancia da classe, defini o mesmo como estático.
+    static criaDigito(cpfCortado){//Observando que o método criaDigito não usa o this, ou seja, não usa nada que vem na instancia da classe, defini o mesmo como estático.
         const cpfArr = cpfCortado.split('');
         let decrementador = cpfArr.length + 1;
         const total = cpfArr.reduce((ac, valor) => {
