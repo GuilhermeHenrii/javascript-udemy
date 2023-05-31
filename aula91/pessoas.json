@@ -1,0 +1,92 @@
+[
+    {
+        "nome": "João Silva",
+        "email": "joao.silva@example.com",
+        "salario": 3500.50,
+        "estado": "São Paulo",
+        "empresa": "ABC Company",
+        "idade": 30,
+        "sexo": "Masculino",
+        "cpf": "123.456.789-00"
+    },
+    {
+        "nome": "Maria Souza",
+        "email": "maria.souza@example.com",
+        "salario": 5000.25,
+        "estado": "Rio de Janeiro",
+        "empresa": "XYZ Corporation",
+        "idade": 28,
+        "sexo": "Feminino",
+        "cpf": "987.654.321-00"
+    },
+    {
+        "nome": "Pedro Santos",
+        "email": "pedro.santos@example.com",
+        "salario": 2500.75,
+        "estado": "Minas Gerais",
+        "empresa": "123 Industries",
+        "idade": 35,
+        "sexo": "Masculino",
+        "cpf": "456.789.123-00"
+    },
+    {
+        "nome": "Ana Oliveira",
+        "email": "ana.oliveira@example.com",
+        "salario": 4000.80,
+        "estado": "Bahia",
+        "empresa": "XYZ Corporation",
+        "idade": 32,
+        "sexo": "Feminino",
+        "cpf": "789.123.456-00"
+    },
+    {
+        "nome": "Lucas Santos",
+        "email": "lucas.santos@example.com",
+        "salario": 2800.60,
+        "estado": "São Paulo",
+        "empresa": "ABC Company",
+        "idade": 27,
+        "sexo": "Masculino",
+        "cpf": "321.654.987-00"
+    },
+    {
+        "nome": "Juliana Lima",
+        "email": "juliana.lima@example.com",
+        "salario": 4500.40,
+        "estado": "Rio de Janeiro",
+        "empresa": "XYZ Corporation",
+        "idade": 29,
+        "sexo": "Feminino",
+        "cpf": "654.987.321-00"
+    },
+    {
+        "nome": "Ricardo Mendes",
+        "email": "ricardo.mendes@example.com",
+        "salario": 3200.70,
+        "estado": "Minas Gerais",
+        "empresa": "123 Industries",
+        "idade": 33,
+        "sexo": "Masculino",
+        "cpf": "987.321.654-00"
+    },
+    {
+        "nome": "Fernanda Costa",
+        "email": "fernanda.costa@example.com",
+        "salario": 3800.90,
+        "estado": "São Paulo",
+        "empresa": "ABC Company",
+        "idade": 31,
+        "sexo": "Feminino",
+        "cpf": "456.123.789-00"
+    },
+    {
+        "nome": "Pedro Santos",
+        "email": "pedro.santos@example.com",
+        "salario": 2500.75,
+        "estado": "Minas Gerais",
+        "empresa": "123 Industries",
+        "idade": 35,
+        "sexo": "Masculino",
+        "cpf": "456.789.123-00"
+    }
+]
