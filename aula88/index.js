@@ -46,7 +46,7 @@ async function executa(){
             console.log('estava pendente' + fase1);//setei 2 segundos e meio para logar a função fase1 novamente, ou seja, ela demorou 2 segundos para executar e como esta sem o await não foi possivel esperar, setando esse novo valor conseguimos ver o valor da função
         }, 2500);
 
-        const fase2 = await tempRender('renderizando 3', 5000);//aqui sera executado o catch e nao executaria mais nada
+        const fase2 = await tempRender('renderizando 2', 5000);//aqui sera executado o catch e nao executaria mais nada
         console.log(fase2);
 
         const fase3 = await tempRender('renderizando 3', 500);

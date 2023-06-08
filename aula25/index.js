@@ -1,4 +1,4 @@
-/* Mai sobre if, else if e else */
+/* Mais sobre if, else if e else */
 
 /* A partir do momento que, dentro de um bloco if, uma condição seja verdadeira, essa condição será executada e o bloco if será encerrado */
 

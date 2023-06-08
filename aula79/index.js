@@ -30,7 +30,7 @@ function criaCarro(nome, cor){
     };
     return Object.create(carroPrototype, {//Para corrigir o problema do código de criaPessoa, usamos o Object.create e passamos o objeto carroPrototype, que possui os métodos acelerar e freiar, isto é, a função criaCarro está retornando um objeto vazio que está recebendo os valores de carroPrototype e automaticamente está jogando isso no prototype de criaCarro.
         nome: {value: nome},
-        sobrenome: {value: cor}//Outra vantagem de usar factory function é que, podemos (de maneira mais simples) configurar as chaves, como nesse caso eu configurei o value das propriedades nome e sobrenome como sendo o valor passado nos parametros nome e cor
+        cor: {value: cor}//Outra vantagem de usar factory function é que, podemos (de maneira mais simples) configurar as chaves, como nesse caso eu configurei o value das propriedades nome e sobrenome como sendo o valor passado nos parametros nome e cor
     });
 }
 

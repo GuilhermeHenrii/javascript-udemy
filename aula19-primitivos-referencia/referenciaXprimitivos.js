@@ -16,3 +16,4 @@ let valoresC = [...valoresReferencia];// (sprath) será feita uma cópia do arra
 console.log(valoresReferencia, valoresB);
 valoresReferencia.push('novo');
 console.log(valoresReferencia, valoresB);// Alterando o valor de uma variavel a outra tbm é alterada pois foi referenciada no mesmo local da memoria
+console.log(valoresC);

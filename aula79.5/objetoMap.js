@@ -12,7 +12,7 @@ console.log(mapa.size);
 console.log(mapa.get('Cachorro'));
 
 for (const animal of mapa) {
-    console.log(animal)
+    console.log(animal);
 }
 
 const mapaDois = new Map();
@@ -29,7 +29,7 @@ original.set(2, 'dois');
 
 const clone = new Map(original)
 
-console.log(original.get(2))       // um
+console.log(original.get(2))// um
 console.log(original === clone) // false (Útil para comparações superficiais)
 
 
@@ -56,7 +56,7 @@ console.log(merged);
 
 /******************************************************************************************/
 //Estudo de casos usando o objeto Map()
-//Nessa situação queremos retornar um ibjeto novasPessoas contando os objetos com um idanetificador no objeto, e na mesma ordem ex: 3 {id:3 nome:'Guilherme'}
+//Nessa situação queremos retornar um objeto novasPessoas contando os objetos com um identificador no objeto, e na mesma ordem ex: 3 {id:3 nome:'Guilherme'}
 
 const pessoas = [
     { id: 3, nome: 'Guilherme' },
