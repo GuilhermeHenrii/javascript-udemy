@@ -67,26 +67,4 @@ form button:hover {
   background: var(--primary-color-darker);
 }
 
-/************************************************************************************************************************/
-div.list-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-ul{
-    list-style: none;
-    padding-left: 0px;
-    align-self: center;
-}
-
-ul.list2{
-    margin-right: 70px;
-}
-
-div#resposta{
-  background-color: red;
-  width: 100%;
-  border-radius: 5px;
-}
-
 
