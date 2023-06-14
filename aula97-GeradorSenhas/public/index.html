@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <section class="container">
+        <h1>Password Generator</h1>
+        <div class="generated-password"></div>
+
+        <form method="get" class="form btn-generator">
+            
+            <label>Amount of characters
+                <input type="number" class="num-caracters">
+            </label>
+            
+            <label class="switch">
+                <span class="switch-text">Add numbers</span>
+
+                <div class="switch-wrapper">
+                    <input type="checkbox" class="add-num checkbox">
+                    <span class="switch-button"></span>
+                </div>
+            </label>
+            
+
+            <label class="switch">
+                <span class="switch-text">Capital letters</span>
+
+                <div class="switch-wrapper">
+                    <input type="checkbox" class="cap-letters checkbox">
+                    <span class="switch-button"></span>
+                </div>
+            </label>
+ 
+
+            <label class="switch">
+                <span class="switch-text">Small letters</span>
+
+                <div class="switch-wrapper">
+                    <input type="checkbox" class="small-letters checkbox">
+                    <span class="switch-button"></span>    
+                </div>
+            </label>
+           
+            
+            <label class="switch">
+                <span class="switch-text">Letters symbols</span>
+
+                <div class="switch-wrapper">
+                    <input type="checkbox" class="symbols checkbox">   
+                    <span class="switch-button"></span> 
+                </div>
+            </label>
+            
+            <button class=".btn-generator">Generate Password</button>
+        </form>
+    </section>
+
+    <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>

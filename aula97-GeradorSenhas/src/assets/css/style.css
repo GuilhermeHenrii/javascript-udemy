@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  
+}
+
+
+.num-caracters{
+  width: 70px;
+  border: none;
+  outline: 1px solid black;
+  font-size: 16px;
+  border-radius: 5px;
+  
+}
+
+
+.num-caracters:focus {
+  outline: 2px solid var(--primary-color);
+  border: none;
+}
+
+
+.switch{
+  display: block;
+  cursor: pointer;
+}
+
+
+.switch .switch-text{
+  padding-right: 0.3rem;
+}
+
+
+.switch .switch-wrapper{
+  display: inline-block;
+  width: 60px;
+  height: 23px;
+  position: relative;
+}
+
+
+.switch .switch-wrapper .switch-button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #475569a4;
+}
+
+
+.switch .switch-wrapper .switch-button::before{
+  content: "";
+  background-color: white;
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  left: 4px;
+  border-radius: 50%;
+  transition: .4s all ease;
+}
+
+
+.switch .switch-wrapper input:checked + .switch-button{
+  background-color: var(--primary-color);
+}
+
+
+.switch .switch-wrapper input:checked + .switch-button::before{
+  transform: translate(30px);
+}
+
+
+.switch .switch-wrapper input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+form button {
+  border: none;
+  background:  #475569a4;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+
+form button:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+
+form button:active{
+  transition: 0.1s ease;
+  transform: scale(0.98);
+  box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.39);
+}
