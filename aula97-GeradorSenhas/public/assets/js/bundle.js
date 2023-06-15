@@ -2,6 +2,78 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/formGeneratedPassword.js":
+/*!**********************************************!*\
+  !*** ./src/modules/formGeneratedPassword.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _generators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./generators */ "./src/modules/generators.js");
+
+var divGeneratedPassword = document.querySelector('.generated-password');
+var inputNumCaracter = document.querySelector('.num-caracters');
+var inputAddNum = document.querySelector('.add-num');
+var inputCapLetters = document.querySelector('.cap-letters');
+var inputSmallLetters = document.querySelector('.small-letters');
+var inputSymbols = document.querySelector('.symbols');
+var inputBtnGenerator = document.querySelector('.btn-generator');
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  inputBtnGenerator.addEventListener('submit', function (e) {
+    e.preventDefault();
+    divGeneratedPassword.innerHTML = generates();
+  });
+});
+function generates() {
+  var password = (0,_generators__WEBPACK_IMPORTED_MODULE_0__["default"])(inputNumCaracter.value, inputAddNum.checked, inputCapLetters.checked, inputSmallLetters.checked, inputSymbols.checked);
+  return password || 'Nada selecionado';
+}
+
+/***/ }),
+
+/***/ "./src/modules/generators.js":
+/*!***********************************!*\
+  !*** ./src/modules/generators.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ passwordGenerator)
+/* harmony export */ });
+var rand = function rand(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+};
+var randCapitalLetter = function randCapitalLetter() {
+  return String.fromCharCode(rand(65, 91));
+};
+var randSmallLetter = function randSmallLetter() {
+  return String.fromCharCode(rand(97, 123));
+};
+var randNumbers = function randNumbers() {
+  return String.fromCharCode(rand(48, 58));
+};
+var symbol = '!#$%&()*+-@?[/\\]{}';
+var randSymbol = function randSymbol() {
+  return symbol[rand(0, symbol.length)];
+};
+function passwordGenerator(amount, numbers, capitall, small, symbols) {
+  var passwordArray = [];
+  amount = Number(amount);
+  for (var i = 0; i < amount; i++) {
+    numbers && passwordArray.push(randNumbers());
+    capitall && passwordArray.push(randCapitalLetter());
+    small && passwordArray.push(randSmallLetter());
+    symbols && passwordArray.push(randSymbol());
+  }
+  return passwordArray.join('').slice(0, amount);
+}
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/assets/css/style.css":
 /*!************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/assets/css/style.css ***!
@@ -51,6 +123,13 @@ body {
   padding: 20px;
   border-radius: 20px;
   
+}
+
+
+.generated-password{
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: green;
 }
 
 
@@ -158,7 +237,7 @@ form button:active{
   transition: 0.1s ease;
   transform: scale(0.98);
   box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.39);
-}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAGA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;;AAGA;EACE,sBAAsB;EACtB,UAAU;AACZ;;;AAGA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;;AAGA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;;AAErB;;;AAGA;EACE,WAAW;EACX,YAAY;EACZ,wBAAwB;EACxB,eAAe;EACf,kBAAkB;;AAEpB;;;AAGA;EACE,uCAAuC;EACvC,YAAY;AACd;;;AAGA;EACE,cAAc;EACd,eAAe;AACjB;;;AAGA;EACE,qBAAqB;AACvB;;;AAGA;EACE,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;;;AAGA;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,QAAQ;EACR,SAAS;EACT,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,mBAAmB;EACnB,2BAA2B;AAC7B;;;AAGA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,kBAAkB;EAClB,wBAAwB;AAC1B;;;AAGA;EACE,sCAAsC;AACxC;;;AAGA;EACE,0BAA0B;AAC5B;;;AAGA;EACE,UAAU;EACV,QAAQ;EACR,SAAS;AACX;;;AAGA;EACE,YAAY;EACZ,sBAAsB;EACtB,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,cAAc;EACd,WAAW;EACX,mBAAmB;EACnB,mBAAmB;AACrB;;;AAGA;EACE,gCAAgC;EAChC,YAAY;AACd;;;AAGA;EACE,qBAAqB;EACrB,sBAAsB;EACtB,gDAAgD;AAClD","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\r\n\r\n\r\n:root {\r\n  --primary-color: rgb(17, 86, 102);\r\n  --primary-color-darker: rgb(9, 48, 56);\r\n}\r\n\r\n\r\n* {\r\n  box-sizing: border-box;\r\n  outline: 0;\r\n}\r\n\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: var(--primary-color);\r\n  font-family: 'Open sans', sans-serif;\r\n  font-size: 1.3em;\r\n  line-height: 1.5em;\r\n}\r\n\r\n\r\n.container {\r\n  max-width: 640px;\r\n  margin: 50px auto;\r\n  background: #fff;\r\n  padding: 20px;\r\n  border-radius: 20px;\r\n  \r\n}\r\n\r\n\r\n.num-caracters{\r\n  width: 70px;\r\n  border: none;\r\n  outline: 1px solid black;\r\n  font-size: 16px;\r\n  border-radius: 5px;\r\n  \r\n}\r\n\r\n\r\n.num-caracters:focus {\r\n  outline: 2px solid var(--primary-color);\r\n  border: none;\r\n}\r\n\r\n\r\n.switch{\r\n  display: block;\r\n  cursor: pointer;\r\n}\r\n\r\n\r\n.switch .switch-text{\r\n  padding-right: 0.3rem;\r\n}\r\n\r\n\r\n.switch .switch-wrapper{\r\n  display: inline-block;\r\n  width: 60px;\r\n  height: 23px;\r\n  position: relative;\r\n}\r\n\r\n\r\n.switch .switch-wrapper .switch-button{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  border-radius: 40px;\r\n  background-color: #475569a4;\r\n}\r\n\r\n\r\n.switch .switch-wrapper .switch-button::before{\r\n  content: \"\";\r\n  background-color: white;\r\n  width: 22px;\r\n  height: 21px;\r\n  position: absolute;\r\n  left: 4px;\r\n  border-radius: 50%;\r\n  transition: .4s all ease;\r\n}\r\n\r\n\r\n.switch .switch-wrapper input:checked + .switch-button{\r\n  background-color: var(--primary-color);\r\n}\r\n\r\n\r\n.switch .switch-wrapper input:checked + .switch-button::before{\r\n  transform: translate(30px);\r\n}\r\n\r\n\r\n.switch .switch-wrapper input{\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n\r\nform button {\r\n  border: none;\r\n  background:  #475569a4;\r\n  color: black;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  height: 50px;\r\n  cursor: pointer;\r\n  margin-top: 30px;\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n  border-radius: 10px;\r\n}\r\n\r\n\r\nform button:hover {\r\n  background: var(--primary-color);\r\n  color: white;\r\n}\r\n\r\n\r\nform button:active{\r\n  transition: 0.1s ease;\r\n  transform: scale(0.98);\r\n  box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.39);\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAGA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;;AAGA;EACE,sBAAsB;EACtB,UAAU;AACZ;;;AAGA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;;AAGA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;;AAErB;;;AAGA;EACE,gBAAgB;EAChB,mBAAmB;EACnB,YAAY;AACd;;;AAGA;EACE,WAAW;EACX,YAAY;EACZ,wBAAwB;EACxB,eAAe;EACf,kBAAkB;;AAEpB;;;AAGA;EACE,uCAAuC;EACvC,YAAY;AACd;;;AAGA;EACE,cAAc;EACd,eAAe;AACjB;;;AAGA;EACE,qBAAqB;AACvB;;;AAGA;EACE,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;;;AAGA;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,QAAQ;EACR,SAAS;EACT,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,mBAAmB;EACnB,2BAA2B;AAC7B;;;AAGA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,kBAAkB;EAClB,wBAAwB;AAC1B;;;AAGA;EACE,sCAAsC;AACxC;;;AAGA;EACE,0BAA0B;AAC5B;;;AAGA;EACE,UAAU;EACV,QAAQ;EACR,SAAS;AACX;;;AAGA;EACE,YAAY;EACZ,sBAAsB;EACtB,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,cAAc;EACd,WAAW;EACX,mBAAmB;EACnB,mBAAmB;AACrB;;;AAGA;EACE,gCAAgC;EAChC,YAAY;AACd;;;AAGA;EACE,qBAAqB;EACrB,sBAAsB;EACtB,gDAAgD;AAClD","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\r\n\r\n\r\n:root {\r\n  --primary-color: rgb(17, 86, 102);\r\n  --primary-color-darker: rgb(9, 48, 56);\r\n}\r\n\r\n\r\n* {\r\n  box-sizing: border-box;\r\n  outline: 0;\r\n}\r\n\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: var(--primary-color);\r\n  font-family: 'Open sans', sans-serif;\r\n  font-size: 1.3em;\r\n  line-height: 1.5em;\r\n}\r\n\r\n\r\n.container {\r\n  max-width: 640px;\r\n  margin: 50px auto;\r\n  background: #fff;\r\n  padding: 20px;\r\n  border-radius: 20px;\r\n  \r\n}\r\n\r\n\r\n.generated-password{\r\n  font-size: 1.6em;\r\n  margin-bottom: 20px;\r\n  color: green;\r\n}\r\n\r\n\r\n.num-caracters{\r\n  width: 70px;\r\n  border: none;\r\n  outline: 1px solid black;\r\n  font-size: 16px;\r\n  border-radius: 5px;\r\n  \r\n}\r\n\r\n\r\n.num-caracters:focus {\r\n  outline: 2px solid var(--primary-color);\r\n  border: none;\r\n}\r\n\r\n\r\n.switch{\r\n  display: block;\r\n  cursor: pointer;\r\n}\r\n\r\n\r\n.switch .switch-text{\r\n  padding-right: 0.3rem;\r\n}\r\n\r\n\r\n.switch .switch-wrapper{\r\n  display: inline-block;\r\n  width: 60px;\r\n  height: 23px;\r\n  position: relative;\r\n}\r\n\r\n\r\n.switch .switch-wrapper .switch-button{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  border-radius: 40px;\r\n  background-color: #475569a4;\r\n}\r\n\r\n\r\n.switch .switch-wrapper .switch-button::before{\r\n  content: \"\";\r\n  background-color: white;\r\n  width: 22px;\r\n  height: 21px;\r\n  position: absolute;\r\n  left: 4px;\r\n  border-radius: 50%;\r\n  transition: .4s all ease;\r\n}\r\n\r\n\r\n.switch .switch-wrapper input:checked + .switch-button{\r\n  background-color: var(--primary-color);\r\n}\r\n\r\n\r\n.switch .switch-wrapper input:checked + .switch-button::before{\r\n  transform: translate(30px);\r\n}\r\n\r\n\r\n.switch .switch-wrapper input{\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n\r\nform button {\r\n  border: none;\r\n  background:  #475569a4;\r\n  color: black;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  height: 50px;\r\n  cursor: pointer;\r\n  margin-top: 30px;\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n  border-radius: 10px;\r\n}\r\n\r\n\r\nform button:hover {\r\n  background: var(--primary-color);\r\n  color: white;\r\n}\r\n\r\n\r\nform button:active{\r\n  transition: 0.1s ease;\r\n  transform: scale(0.98);\r\n  box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.39);\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -685,84 +764,11 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-//import { forEach } from 'core-js/core/array';
+/* harmony import */ var _modules_formGeneratedPassword__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/formGeneratedPassword */ "./src/modules/formGeneratedPassword.js");
+/* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
 
 
-//criar uma função que gere um numero aleatório
-//criar uma função que gere uma letra maiuscula aleatoria
-//criar uma função que gere uma letra minuscula aleatoria
-//criar uma função que gere simbolos aleatórios
-//fazer com que, de acordo com o numero de caracteres informados no import, isso seja correspondido
-var PasswordGenerator = /*#__PURE__*/function () {
-  function PasswordGenerator() {
-    _classCallCheck(this, PasswordGenerator);
-    this.form = document.querySelector('.form');
-    this.amountCaracteres = document.querySelector('.num-caracters');
-    this.inputAddNum = document.querySelector('.add-num');
-    this.div = document.querySelector('.generated-password');
-    this.array = [];
-  }
-  _createClass(PasswordGenerator, [{
-    key: "handleClcik",
-    value: function handleClcik() {
-      var _this = this;
-      var btn = document.querySelector('.btn-generator');
-      this.form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var checkBoxs = document.querySelectorAll('.checkbox');
-        checkBoxs.forEach(function (value, id) {
-          if (value.checked) {
-            if (id === 0) _this.addNumbers();else if (id === 1) {
-              console.log(_this.randomCapitalLetters());
-            } else if (id === 2) {
-              console.log(_this.randomSmallLetters());
-            } else if (id === 3) {
-              alert(id);
-            }
-          }
-        });
-      });
-    }
-  }, {
-    key: "addNumbers",
-    value: function addNumbers() {
-      var rand = Math.floor(Math.random() * (10 - 1) + 1);
-      this.array.push(rand);
-      return console.log(rand);
-    }
-  }, {
-    key: "randomSmallLetters",
-    value: function randomSmallLetters() {
-      var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-      var rand = Math.floor(Math.random() * (26 - 1) + 1);
-      var randSmallLetter = letters[rand];
-      this.array.push(letters[rand]);
-      return randSmallLetter;
-    }
-  }, {
-    key: "randomCapitalLetters",
-    value: function randomCapitalLetters() {
-      var smalLetters = this.randomSmallLetters();
-      var capitalLetters = smalLetters.toUpperCase;
-      return capitalLetters;
-    }
-  }, {
-    key: "showArray",
-    value: function showArray() {
-      return console.log(this.array);
-    }
-  }]);
-  return PasswordGenerator;
-}();
-var add = new PasswordGenerator();
-add.handleClcik();
+(0,_modules_formGeneratedPassword__WEBPACK_IMPORTED_MODULE_0__["default"])();
 })();
 
 /******/ })()

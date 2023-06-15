@@ -33,6 +33,13 @@ body {
 }
 
 
+.generated-password{
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: green;
+}
+
+
 .num-caracters{
   width: 70px;
   border: none;
