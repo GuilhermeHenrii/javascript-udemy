@@ -57,8 +57,8 @@ body {
 
 
 .switch{
-  display: block;
-  cursor: pointer;
+  display: table;
+  margin-top: 15px;
 }
 
 
@@ -72,6 +72,27 @@ body {
   width: 60px;
   height: 23px;
   position: relative;
+  cursor: pointer;
+}
+
+
+.switch .div-add-num{
+  margin-left: 130px;
+}
+
+
+.switch .div-cap-letters{
+  margin-left: 46.5px;
+}
+
+
+.switch .div-small-letters{
+  margin-left: 46.5px;
+}
+
+
+.switch .div-symbols{
+  margin-left: 131px;
 }
 
 

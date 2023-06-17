@@ -150,8 +150,8 @@ body {
 
 
 .switch{
-  display: block;
-  cursor: pointer;
+  display: table;
+  margin-top: 15px;
 }
 
 
@@ -165,6 +165,27 @@ body {
   width: 60px;
   height: 23px;
   position: relative;
+  cursor: pointer;
+}
+
+
+.switch .div-add-num{
+  margin-left: 130px;
+}
+
+
+.switch .div-cap-letters{
+  margin-left: 46.5px;
+}
+
+
+.switch .div-small-letters{
+  margin-left: 46.5px;
+}
+
+
+.switch .div-symbols{
+  margin-left: 131px;
 }
 
 
@@ -237,7 +258,7 @@ form button:active{
   transition: 0.1s ease;
   transform: scale(0.98);
   box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.39);
-}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAGA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;;AAGA;EACE,sBAAsB;EACtB,UAAU;AACZ;;;AAGA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;;AAGA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;;AAErB;;;AAGA;EACE,gBAAgB;EAChB,mBAAmB;EACnB,YAAY;AACd;;;AAGA;EACE,WAAW;EACX,YAAY;EACZ,wBAAwB;EACxB,eAAe;EACf,kBAAkB;;AAEpB;;;AAGA;EACE,uCAAuC;EACvC,YAAY;AACd;;;AAGA;EACE,cAAc;EACd,eAAe;AACjB;;;AAGA;EACE,qBAAqB;AACvB;;;AAGA;EACE,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;;;AAGA;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,QAAQ;EACR,SAAS;EACT,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,mBAAmB;EACnB,2BAA2B;AAC7B;;;AAGA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,kBAAkB;EAClB,wBAAwB;AAC1B;;;AAGA;EACE,sCAAsC;AACxC;;;AAGA;EACE,0BAA0B;AAC5B;;;AAGA;EACE,UAAU;EACV,QAAQ;EACR,SAAS;AACX;;;AAGA;EACE,YAAY;EACZ,sBAAsB;EACtB,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,cAAc;EACd,WAAW;EACX,mBAAmB;EACnB,mBAAmB;AACrB;;;AAGA;EACE,gCAAgC;EAChC,YAAY;AACd;;;AAGA;EACE,qBAAqB;EACrB,sBAAsB;EACtB,gDAAgD;AAClD","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\r\n\r\n\r\n:root {\r\n  --primary-color: rgb(17, 86, 102);\r\n  --primary-color-darker: rgb(9, 48, 56);\r\n}\r\n\r\n\r\n* {\r\n  box-sizing: border-box;\r\n  outline: 0;\r\n}\r\n\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: var(--primary-color);\r\n  font-family: 'Open sans', sans-serif;\r\n  font-size: 1.3em;\r\n  line-height: 1.5em;\r\n}\r\n\r\n\r\n.container {\r\n  max-width: 640px;\r\n  margin: 50px auto;\r\n  background: #fff;\r\n  padding: 20px;\r\n  border-radius: 20px;\r\n  \r\n}\r\n\r\n\r\n.generated-password{\r\n  font-size: 1.6em;\r\n  margin-bottom: 20px;\r\n  color: green;\r\n}\r\n\r\n\r\n.num-caracters{\r\n  width: 70px;\r\n  border: none;\r\n  outline: 1px solid black;\r\n  font-size: 16px;\r\n  border-radius: 5px;\r\n  \r\n}\r\n\r\n\r\n.num-caracters:focus {\r\n  outline: 2px solid var(--primary-color);\r\n  border: none;\r\n}\r\n\r\n\r\n.switch{\r\n  display: block;\r\n  cursor: pointer;\r\n}\r\n\r\n\r\n.switch .switch-text{\r\n  padding-right: 0.3rem;\r\n}\r\n\r\n\r\n.switch .switch-wrapper{\r\n  display: inline-block;\r\n  width: 60px;\r\n  height: 23px;\r\n  position: relative;\r\n}\r\n\r\n\r\n.switch .switch-wrapper .switch-button{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  border-radius: 40px;\r\n  background-color: #475569a4;\r\n}\r\n\r\n\r\n.switch .switch-wrapper .switch-button::before{\r\n  content: \"\";\r\n  background-color: white;\r\n  width: 22px;\r\n  height: 21px;\r\n  position: absolute;\r\n  left: 4px;\r\n  border-radius: 50%;\r\n  transition: .4s all ease;\r\n}\r\n\r\n\r\n.switch .switch-wrapper input:checked + .switch-button{\r\n  background-color: var(--primary-color);\r\n}\r\n\r\n\r\n.switch .switch-wrapper input:checked + .switch-button::before{\r\n  transform: translate(30px);\r\n}\r\n\r\n\r\n.switch .switch-wrapper input{\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n\r\nform button {\r\n  border: none;\r\n  background:  #475569a4;\r\n  color: black;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  height: 50px;\r\n  cursor: pointer;\r\n  margin-top: 30px;\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n  border-radius: 10px;\r\n}\r\n\r\n\r\nform button:hover {\r\n  background: var(--primary-color);\r\n  color: white;\r\n}\r\n\r\n\r\nform button:active{\r\n  transition: 0.1s ease;\r\n  transform: scale(0.98);\r\n  box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.39);\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAGA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;;AAGA;EACE,sBAAsB;EACtB,UAAU;AACZ;;;AAGA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;;AAGA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;;AAErB;;;AAGA;EACE,gBAAgB;EAChB,mBAAmB;EACnB,YAAY;AACd;;;AAGA;EACE,WAAW;EACX,YAAY;EACZ,wBAAwB;EACxB,eAAe;EACf,kBAAkB;;AAEpB;;;AAGA;EACE,uCAAuC;EACvC,YAAY;AACd;;;AAGA;EACE,cAAc;EACd,gBAAgB;AAClB;;;AAGA;EACE,qBAAqB;AACvB;;;AAGA;EACE,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,eAAe;AACjB;;;AAGA;EACE,kBAAkB;AACpB;;;AAGA;EACE,mBAAmB;AACrB;;;AAGA;EACE,mBAAmB;AACrB;;;AAGA;EACE,kBAAkB;AACpB;;;AAGA;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,QAAQ;EACR,SAAS;EACT,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,mBAAmB;EACnB,2BAA2B;AAC7B;;;AAGA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,kBAAkB;EAClB,wBAAwB;AAC1B;;;AAGA;EACE,sCAAsC;AACxC;;;AAGA;EACE,0BAA0B;AAC5B;;;AAGA;EACE,UAAU;EACV,QAAQ;EACR,SAAS;AACX;;;AAGA;EACE,YAAY;EACZ,sBAAsB;EACtB,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,cAAc;EACd,WAAW;EACX,mBAAmB;EACnB,mBAAmB;AACrB;;;AAGA;EACE,gCAAgC;EAChC,YAAY;AACd;;;AAGA;EACE,qBAAqB;EACrB,sBAAsB;EACtB,gDAAgD;AAClD","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\r\n\r\n\r\n:root {\r\n  --primary-color: rgb(17, 86, 102);\r\n  --primary-color-darker: rgb(9, 48, 56);\r\n}\r\n\r\n\r\n* {\r\n  box-sizing: border-box;\r\n  outline: 0;\r\n}\r\n\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: var(--primary-color);\r\n  font-family: 'Open sans', sans-serif;\r\n  font-size: 1.3em;\r\n  line-height: 1.5em;\r\n}\r\n\r\n\r\n.container {\r\n  max-width: 640px;\r\n  margin: 50px auto;\r\n  background: #fff;\r\n  padding: 20px;\r\n  border-radius: 20px;\r\n  \r\n}\r\n\r\n\r\n.generated-password{\r\n  font-size: 1.6em;\r\n  margin-bottom: 20px;\r\n  color: green;\r\n}\r\n\r\n\r\n.num-caracters{\r\n  width: 70px;\r\n  border: none;\r\n  outline: 1px solid black;\r\n  font-size: 16px;\r\n  border-radius: 5px;\r\n  \r\n}\r\n\r\n\r\n.num-caracters:focus {\r\n  outline: 2px solid var(--primary-color);\r\n  border: none;\r\n}\r\n\r\n\r\n.switch{\r\n  display: table;\r\n  margin-top: 15px;\r\n}\r\n\r\n\r\n.switch .switch-text{\r\n  padding-right: 0.3rem;\r\n}\r\n\r\n\r\n.switch .switch-wrapper{\r\n  display: inline-block;\r\n  width: 60px;\r\n  height: 23px;\r\n  position: relative;\r\n  cursor: pointer;\r\n}\r\n\r\n\r\n.switch .div-add-num{\r\n  margin-left: 130px;\r\n}\r\n\r\n\r\n.switch .div-cap-letters{\r\n  margin-left: 46.5px;\r\n}\r\n\r\n\r\n.switch .div-small-letters{\r\n  margin-left: 46.5px;\r\n}\r\n\r\n\r\n.switch .div-symbols{\r\n  margin-left: 131px;\r\n}\r\n\r\n\r\n.switch .switch-wrapper .switch-button{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  border-radius: 40px;\r\n  background-color: #475569a4;\r\n}\r\n\r\n\r\n.switch .switch-wrapper .switch-button::before{\r\n  content: \"\";\r\n  background-color: white;\r\n  width: 22px;\r\n  height: 21px;\r\n  position: absolute;\r\n  left: 4px;\r\n  border-radius: 50%;\r\n  transition: .4s all ease;\r\n}\r\n\r\n\r\n.switch .switch-wrapper input:checked + .switch-button{\r\n  background-color: var(--primary-color);\r\n}\r\n\r\n\r\n.switch .switch-wrapper input:checked + .switch-button::before{\r\n  transform: translate(30px);\r\n}\r\n\r\n\r\n.switch .switch-wrapper input{\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n\r\nform button {\r\n  border: none;\r\n  background:  #475569a4;\r\n  color: black;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  height: 50px;\r\n  cursor: pointer;\r\n  margin-top: 30px;\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n  border-radius: 10px;\r\n}\r\n\r\n\r\nform button:hover {\r\n  background: var(--primary-color);\r\n  color: white;\r\n}\r\n\r\n\r\nform button:active{\r\n  transition: 0.1s ease;\r\n  transform: scale(0.98);\r\n  box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.39);\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
