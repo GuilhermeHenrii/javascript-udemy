@@ -25,5 +25,11 @@ function generates(){
         inputSymbols.checked
     );
 
-    return password || 'Nada selecionado';
+    if(password){
+        divGeneratedPassword.classList.remove('invalidPassword');
+        return password;
+    }else{
+        divGeneratedPassword.classList.add('invalidPassword');
+        return divGeneratedPassword.innerHTML = 'Nada selecionado';
+    }
 }
