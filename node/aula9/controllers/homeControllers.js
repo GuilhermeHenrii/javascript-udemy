@@ -9,6 +9,6 @@ exports.homePage = (req, res) => {
 };
 
 exports.trataPost = (req, res) => {
-    res.send("Formulário enviado com sucesso");
+    res.send(`O tecnologia enviada foi: ${req.body.tec}`);
     console.log(exports);
 };

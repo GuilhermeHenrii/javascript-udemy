@@ -1,7 +1,7 @@
 const express = require('express');
-const route = express.Router(); //importanto o Router
-const homeController = require('./controllers/homeControllers'); //importando o arquivo home controllers
-const contatsController = require('./controllers/contactsControllers');//importando o arquivo contactsController
+const route = express.Router();
+const homeController = require('./src/controllers/homeControllers');
+const contatsController = require('./src/controllers/contactsControllers');
 
 //Rotas da home
 route.get('/', homeController.homePage);
