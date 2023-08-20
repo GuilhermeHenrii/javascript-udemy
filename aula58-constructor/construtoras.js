@@ -3,7 +3,7 @@
 //função construtora -> Pessoa (new)
 
 function Pessoa(nome, sobrenome){
-    //por ser uma função construtora o jv entende que
+    //por ser uma função construtora o js entende que
     //o corpo da função é um objeto
 
     //atributos e metodos privados
